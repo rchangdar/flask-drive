@@ -7,7 +7,7 @@ from s3_demo import list_files, download_file, upload_file
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
-BUCKET = "insert_bucket_name_here"
+BUCKET = "****************"
 
 
 @app.route('/')
@@ -17,7 +17,7 @@ def entry_point():
 
 @app.route("/storage")
 def storage():
-    contents = list_files("flaskdrive")
+    contents = list_files(BUCKET)
     return render_template('storage.html', contents=contents)
 
 

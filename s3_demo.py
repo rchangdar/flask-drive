@@ -31,7 +31,7 @@ def list_files(bucket):
     contents = []
     try:
         for item in s3.list_objects(Bucket=bucket)['Contents']:
-            print(item)
+            #print(item)
             contents.append(item)
     except Exception as e:
         pass
